@@ -3,11 +3,15 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "net.devh.boot.grpc.examples.lib";
 option java_outer_classname = "HelloWorldProto";
+import "google/api/annotations.proto";
 
 // The greeting service definition.
 service Simple {
     // Sends a greeting
     rpc SayHello (HelloRequest) returns (HelloReply) {
+        option (google.api.http) = {
+            post: "/api/helloWorld"
+        };
     }
 }
 

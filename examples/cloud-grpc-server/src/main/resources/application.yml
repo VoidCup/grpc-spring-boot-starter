@@ -1,5 +1,5 @@
 server:
-  port: 58080
+  port: 8080
 
 spring:
   application:
@@ -7,4 +7,4 @@ spring:
 
 grpc:
   server:
-    port: 0
+    port: 8081
